@@ -283,3 +283,41 @@ ffmpeg:
       entity_id:
         description: Name(s) of entites that will restart. Platform dependent.
         example: 'binary_sensor.ffmpeg_noise'
+
+max:
+  set_association:
+    description: Connect two max devices.
+    fields:
+      entity_id:
+        description: Name of the entity that will connected with the target.
+        example: 'climate.max_kitchen_thermostat'
+      target_id:
+        description: Name of the target that will connected with the receiver.
+        example: 'climate.max_kitchen_thermostat'
+  set_config_temperature:
+    description: Define the different standard temperatures for the modis.
+    fields:
+      entity_id:
+        description: Name of the devices.
+        example: 'climate.max_kitchen_thermostat'
+      comfort_temperature:
+        description: The day temperature im auto modus.
+        example: 21
+      eco_temperature:
+        description: The nigth temperature im auto modus.
+        example: 16
+      max_temperature:
+        description: The maximal possible temperature.
+        example: 30.5
+      min_temperature:
+        description: The minimal possible temperature.
+        example: 4.5
+      measurement_offset:
+        description: Offset on the temperatur sensor of the thermostat.
+        example: 1.5
+      window_open_temperature:
+        description: Temperatur by a open window.
+        example: 12
+      window_open_duration:
+        description: Time when the thermostat switch to normal [min].
+        example: 15
