@@ -10,7 +10,7 @@ from homeassistant.config import load_yaml_config_file
 
 
 #REQUIREMENTS = ['maxcul==0.1.1']
-REQUIREMENTS = ['https://github.com/karlTGA/MaxCul-Python/archive/develop.zip#maxcul==0.1.2']
+REQUIREMENTS = ['https://github.com/karlTGA/MaxCul-Python/archive/develop.zip#maxcul==0.1.2', 'logbook==1.0.0']
 
 CUBE_ID = 0x123456
 MAX = None
