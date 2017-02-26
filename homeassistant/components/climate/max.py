@@ -228,19 +228,19 @@ class MaxThermostat(MaxDevice):
     def update(self):
         """Get the latest data and updates the state."""
 
-        if self._thread.thermostat_states:
+        if self._thread.states:
             default = None
-            self._target_temperature = self._thread.thermostat_states[self._id].get('desired_temperature', default)
-            self._current_temperature = self._thread.thermostat_states[self._id].get('measured_temperature', default)
-            self._battery_low = self._thread.thermostat_states[self._id].get('battery_low', default)
-            self._dstsetting = self._thread.thermostat_states[self._id].get('dstsetting', default)
-            self._is_locked = self._thread.thermostat_states[self._id].get('is_locked', default)
-            self._langateway = self._thread.thermostat_states[self._id].get('langateway', default)
-            self._last_updated = self._thread.thermostat_states[self._id].get('last_updated', default)
-            self._mode = self._thread.thermostat_states[self._id].get('mode', default)
-            self._rferror = self._thread.thermostat_states[self._id].get('rferror', default)
-            self._signal_strength = self._thread.thermostat_states[self._id].get('signal_strenth', default)
-            self._valve_position = self._thread.thermostat_states[self._id].get('valve_position', default)
+            self._target_temperature = self._thread.states[self._id].get('desired_temperature', default)
+            self._current_temperature = self._thread.states[self._id].get('measured_temperature', default)
+            self._battery_low = self._thread.states[self._id].get('battery_low', default)
+            self._dstsetting = self._thread.states[self._id].get('dstsetting', default)
+            self._is_locked = self._thread.states[self._id].get('is_locked', default)
+            self._langateway = self._thread.states[self._id].get('langateway', default)
+            self._last_updated = self._thread.states[self._id].get('last_updated', default)
+            self._mode = self._thread.states[self._id].get('mode', default)
+            self._rferror = self._thread.states[self._id].get('rferror', default)
+            self._signal_strength = self._thread.states[self._id].get('signal_strenth', default)
+            self._valve_position = self._thread.states[self._id].get('valve_position', default)
 
 class MaxWallthermostat(MaxDevice):
 
@@ -269,17 +269,17 @@ class MaxWallthermostat(MaxDevice):
     def update(self):
         """Get the latest data and updates the state."""
 
-        if self._thread.wallthermostat_states:
+        if self._thread.states:
             default = None
-            self._target_temperature = self._thread.wallthermostat_states[self._id].get('desired_temperature', default)
-            self._current_temperature = self._thread.wallthermostat_states[self._id].get('temperature', default)
-            self._mode = self._thread.wallthermostat_states[self._id].get('mode', 'auto')
-            self._signal_strength = self._thread.wallthermostat_states[self._id].get('signal_strenth', default)
-            self._last_updated = self._thread.wallthermostat_states[self._id].get('last_updated', default)
-            self._battery_low = self._thread.wallthermostat_states[self._id].get('battery_low', default)
-            self._display_actual_temprature = self._thread.wallthermostat_states[self._id].get('display_actual_temperature', default)
-            self._dstsetting = self._thread.wallthermostat_states[self._id].get('dstsetting', default)
-            self._is_locked = self._thread.wallthermostat_states[self._id].get('is_locked', default)
-            self._langateway = self._thread.wallthermostat_states[self._id].get('langateway', default)
-            self._rferror = self._thread.wallthermostat_states[self._id].get('rferror', default)
-            self._until = self._thread.wallthermostat_states[self._id].get('until_str', default)
+            self._target_temperature = self._thread.states[self._id].get('desired_temperature', default)
+            self._current_temperature = self._thread.states[self._id].get('temperature', default)
+            self._mode = self._thread.states[self._id].get('mode', 'auto')
+            self._signal_strength = self._thread.states[self._id].get('signal_strenth', default)
+            self._last_updated = self._thread.states[self._id].get('last_updated', default)
+            self._battery_low = self._thread.states[self._id].get('battery_low', default)
+            self._display_actual_temprature = self._thread.states[self._id].get('display_actual_temperature', default)
+            self._dstsetting = self._thread.states[self._id].get('dstsetting', default)
+            self._is_locked = self._thread.states[self._id].get('is_locked', default)
+            self._langateway = self._thread.states[self._id].get('langateway', default)
+            self._rferror = self._thread.states[self._id].get('rferror', default)
+            self._until = self._thread.states[self._id].get('until_str', default)
