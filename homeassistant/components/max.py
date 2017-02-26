@@ -22,6 +22,14 @@ CONF_BAUDRATE = 'baudrate'
 DEFAULT_BAUDRATE = 38400
 DEFAULT_CULPATH = "/dev/ttyUSB0"
 
+"""Max Device Types"""
+MAX_CUBE = "Cube"
+MAX_THERMOSTAT = "HeatingThermostat"
+MAX_THERMOSTAT_PLUS = "HeatingThermostatPlus"
+MAX_WALLTHERMOSTAT = "WallMountedThermostat"
+MAX_SHUTTERCONTACT = "ShutterContact"
+MAX_PUSHBUTTON = "PushButton"
+
 CONFIG_SCHEMA = vol.Schema({
     DOMAIN: vol.Schema({
         vol.Optional(CONF_BAUDRATE, default=DEFAULT_BAUDRATE): cv.positive_int,
